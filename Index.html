@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mi primera pagina web </title>
 </head>
-<body>
-   <h1> bienvenidos al curso  </h1>
+<body style="background-color: beige;">
+   <!--CONTENEDOR DE MENU NAV-->
+   <nav id="inicio"> 
+    <a href="#presentacion"> PRESENTACION</a> &emsp;
+    <a href="#links"> link de la institucion </a> &emsp;
+    <a href="#imagenes"> imagenes </a> &emsp;
+    <a href="#lista"> LISTAS  ACADEMICAS</a> &emsp;
+    <a href="#tabla"> TABLA DE CLUBES</a> &emsp;
+    <a href="todo sobre mi persona.html" target="_blank"> TODO SOBRE MI PERSONA</a> &emsp;
+     </nav>
+    <h1 id="presentacion"> bienvenidos al curso  </h1>
    <p> curso: lenguaje para el desarrollo y soporte de sistemas 
 
    </p><!--el parrafo coloca un enter automatico -->
@@ -14,8 +23,9 @@
     Apellido: Camacho <br><br>
     distrito: SJL
 
-</p>cargo: estudiante
-<hr>
+</p>cargo: estudiante <br>
+<a href="#inicio" style="font-size: 25px;">volver al inicio</a>
+<hr style="height:10px; border:solid; background-color: black;"> 
 <h2>evaluaciones del curso:
 </h2>
 <h3>EVIDENCIA 1 </h3>
@@ -26,6 +36,108 @@
 <h4>JAVACCRIPT</h4>
 <h3 style="font-size: 20px;">EVIDENCIA 4</h3> <!--es una medida exacta-->
 <h4 style="font-size: 2em;">FIREBASE</h4> <!-- -->
+
+<hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
+<!--tipos de borde solid= compacto; doted= punteado; double= doble-->
+<h2 id="links">USO DE LINKS</h2>
+<p> liinks de la institucion</p>
+<a href="https://www.certus.edu.pe/" target="_blank" > ENLACE CERTUS </a> <br>
+<a href="https://intranet.certus.edu.pe/Login/" target="_blank" > portal certus</a> <br>
+<a href="https://www.certus.edu.pe/sede/san-juan-de-lurigancho/" target="_blank"> MI SEDE</a> <br>
+<hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
+
+<h2 id="imagenes"> USO DE IMAGENES </h2>
+<P>IMAGENES DE ANIMALES</P>
+<img src="pitbull.jpg" alt="imagen no carga" width="300px">
+<img src="hamster.jpg" alt="imagen no carga" width="600px"> <br>
+<a href="#inicio" style="font-size: 25px;">volver al inicio</a>
+<hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
+
+<p>IMAGENES DE ESCUDOS DE FUTBOL</p>
+<img src="imagenes_escudos/brasil.png" alt="imagen no carga" width="300px"> <br>
+<a href="#inicio" style="font-size: 25px;">volver al inicio</a> 
+<hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
+<p>IMAGENES DE LOGO DE PELICULAS</p>
+<img src="marvel.webp" alt="imagen no carga" width="300px"> <br>
+<a href="#inicio" style="font-size: 25px;">volver al inicio</a>
+<hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
+<h2 id="lista">USO DE LISTAS</h2>
+    <p>CONOCIMIENTOS PREVIOS DE HTML en orden metodologico</p>
+       <ol type="A"> 
+        <li> ofimatica basica  </li>
+        <li> gestion de carpetas </li>
+        <li> Instalacion y desisntalacion de programas </li>
+
+       </ol>
+<p> Cualidades y buenas practicas a seguir </p>
+    <ul>
+         <li>capacidad de atencion</li>
+         <li>consultar dudas no resultas </li>
+         <li>Repasar temas y realizar tareas en casa </li>
+    </ul>
+    <a href="#inicio" style="font-size: 25px;">volver al inicio</a>
+    <hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
+
+      <h2 id="tabla"> Uso de tablas</h2>
+      <p>informacion de clubes </p>
+      <table border="2px" style="background-color: aqua; font-size: 25px; ">
+            <tr>
+                <th>Nombre de club</th> 
+                 <th>titulos </th>
+                <th>Pais</th>
+                <th>Jugador NUMERO 10</th>
+                <th> mejor jugador actual</th>
+                <th>escudo </th>
+
+            </tr>
+
+            <tr>
+                <td> Brasil</td>
+                <td> 5 Copas del mundo</td>
+                <td> Brasil</td>
+                <td>Neymar Jr</td>
+                <td> vinicius jr</td>
+                <td> <img src="imagenes_escudos/brasil.png" alt="" width="100px"> </td>
+            </tr>
+
+
+            <tr>
+                <td> sporting cristal</td>
+                <td> 20 campeonatos nacioales</td>
+                <td> Peru</td>
+                <td>cristofer gonzales</td>
+                <td> martin tavara </td>
+                <td> <img src="imagenes_escudos/cristal.png"" width="100px"> </td>
+            </tr>
+
+
+            <tr>
+                <td> melgar</td>
+                <td> 2 campeonatos nacionales</td>
+                <td> Peru</td>
+                <td>TOMAS MARTINEZ</td>
+                <td> cuesta</td>
+                <td> <img src="imagenes_escudos/melgar.jpg"" width="100px"> </td>
+            </tr>
+
+      </table>
+     <a href="#inicio" style="font-size: 25px;">volver al inicio</a>
+     <hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
+
+    <h2>USO DE VIDEO LOCAL</h2>
+<video src="Inteligencia Artificial, te falta un algo  Casi Creativo.mp4" height="400px"  controls autoplay muted>     </video>
+<hr>
+<h2>video de youtube</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Kq2PmOU5sVY?si=KvW-3Ab6o9a0zI1A" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<hr>
+<h2>USO DE AUDIO</h2>
+<audio src="musica1.mp3" controls loop autoplay> audio no soportado</audio>
+
+
+
+
 
 
 
