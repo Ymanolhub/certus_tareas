@@ -13,20 +13,20 @@
     <a href="#imagenes"> imagenes </a> &emsp;
     <a href="#lista"> LISTAS  ACADEMICAS</a> &emsp;
     <a href="#tabla"> TABLA DE CLUBES</a> &emsp;
-    <a href="todo sobre mi persona.html" target="_blank"> TODO SOBRE MI PERSONA</a> &emsp;
+    <a href="#todo sobre mi persona.html" target="_blank"> TODO SOBRE MI PERSONA</a> &emsp;
      </nav>
-    <h1 id="presentacion"> bienvenidos al curso  </h1>
-   <p> curso: lenguaje para el desarrollo y soporte de sistemas 
+    <h1 id="presentacion"> Bienvenidos al curso  </h1>
+   <p> Curso: Lenguaje para el desarrollo y soporte de sistemas 
 
    </p><!--el parrafo coloca un enter automatico -->
-<p>nombre: Ymanol <br>
+<p>Nombre: Ymanol <br>
     Apellido: Camacho <br><br>
-    distrito: SJL
+    Distrito: SJL
 
-</p>cargo: estudiante <br>
+</p>Cargo: Estudiante <br>
 <a href="#inicio" style="font-size: 25px;">volver al inicio</a>
 <hr style="height:10px; border:solid; background-color: black;"> 
-<h2>evaluaciones del curso:
+<h2>Evaluaciones del curso:
 </h2>
 <h3>EVIDENCIA 1 </h3>
 <h4> HTML</h4>
@@ -61,7 +61,13 @@
 <img src="marvel.webp" alt="imagen no carga" width="300px"> <br>
 <a href="#inicio" style="font-size: 25px;">volver al inicio</a>
 <hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
+
+
 <h2 id="lista">USO DE LISTAS</h2>
+  <div style="font-family: Arial, Helvetica, sans-serif; 
+              color: blue; background-color:
+            aqua; font-size: 20px; 
+              font-style: italic;">  
     <p>CONOCIMIENTOS PREVIOS DE HTML en orden metodologico</p>
        <ol type="A"> 
         <li> ofimatica basica  </li>
@@ -69,12 +75,16 @@
         <li> Instalacion y desisntalacion de programas </li>
 
        </ol>
+ </div>
+ <div style="font-family: cursive; color: gold; background-color: lightslategray; font-size: 20px; font-style: oblique;"
+       >
 <p> Cualidades y buenas practicas a seguir </p>
     <ul>
          <li>capacidad de atencion</li>
          <li>consultar dudas no resultas </li>
          <li>Repasar temas y realizar tareas en casa </li>
     </ul>
+ </div>
     <a href="#inicio" style="font-size: 25px;">volver al inicio</a>
     <hr style="height: 10px; border: solid;background-color: rgb(8, 8, 8)">
 
@@ -103,7 +113,7 @@
 
             <tr>
                 <td> sporting cristal</td>
-                <td> 20 campeonatos nacioales</td>
+                <td> 20 campeonatos nacionales</td>
                 <td> Peru</td>
                 <td>cristofer gonzales</td>
                 <td> martin tavara </td>
@@ -136,6 +146,54 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <audio src="musica1.mp3" controls loop autoplay> audio no soportado</audio>
 
 
+<hr>
+<h2>USO DE FORMULARIO</h2>
+<form action="todo_sobre_mi_persona.html"  method="post"  >
+
+<p> <label for="Nombre"> Nombre: <input type="text" id="Nombre" required> </label> </p>    
+<p> <label for="Apeliido"> Apellido: <input type="text" id="Apellido"></label> </p>  
+<p><label for="Edad"> Edad: <input type="number" id="Edad " min="18" max="80"> </label> </p>
+
+<p><label for="observacion"> Observacion:
+<textarea name="observacion" id=" observacion" style="height: 180px; width:300px ; font-size: 25px;">
+
+</textarea>
+
+</label>
+<p>   <label for="estatura"> Estatura
+          <select name="grupoestatura" id="estatura">
+            <option value="seleccione"> Seleccione</option>
+            <option value="menor de 1.50"> menor de 1.50 </option>
+            <option value="de 1.50 a 1.59"> de 1.50 a 1.59</option>
+            <option value="1.60 a 1.69"> de 1.60 a 1.69 </option>
+            <option value="mayor o igual a 1.70"> mayor o igual a 1.70</option>
+          </select>
+    
+</label>
+</p>
+<p> <label> Curso llevados</label>
+    <br>
+    <input type="checkbox" name="cursos" value="matematica" id="matematica">
+        <label for="matematica"> Matematica</label> <br>
+    <input type="checkbox" name="cursos" value="LENGUAJE DSS" id="LDSS"> 
+         <label for="LDSS"> LENGUAJE DSS</label> <br>
+    <input type="checkbox" name="cursos" value="introduccion investigacion" id="intro_INV">
+        <label for="INTRO_INV"> Introduccion investigacion</label> <br>
+    <input type="checkbox" name="cursos" value="nuevas tendencias" id="Nuevas_Tendencias">
+         <label for="Nuevas_Tendencias"> Nuevas tendencias</label> <br>
+
+</p> 
+
+
+
+
+<button type="submit" style="font-size: 25px;"> Enviar     </button>
+
+
+
+
+
+</form>
 
 
 
