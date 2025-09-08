@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mi primera pagina web </title>
+    <title>mi primera pagina web </title> 
+    <link rel="stylesheet" type="text/css" href="estilos1.CSS"/>
 </head>
 <body style="background-color: beige;">
    <!--CONTENEDOR DE MENU NAV-->
@@ -76,7 +77,7 @@
 
        </ol>
  </div>
- <div style="font-family: cursive; color: gold; background-color: lightslategray; font-size: 20px; font-style: oblique;"
+ <div style="font-family: cursive; color: black; background-color: lightslategray; font-size: 20px; font-style: oblique;"
        >
 <p> Cualidades y buenas practicas a seguir </p>
     <ul>
@@ -90,7 +91,7 @@
 
       <h2 id="tabla"> Uso de tablas</h2>
       <p>informacion de clubes </p>
-      <table border="2px" style="background-color: aqua; font-size: 25px; ">
+      <table border="2px" style="background-color: green; font-size: 25px; ">
             <tr>
                 <th>Nombre de club</th> 
                  <th>titulos </th>
@@ -150,9 +151,9 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <h2>USO DE FORMULARIO</h2>
 <form action="todo_sobre_mi_persona.html"  method="post"  >
 
-<p> <label for="Nombre"> Nombre: <input type="text" id="Nombre" required> </label> </p>    
-<p> <label for="Apeliido"> Apellido: <input type="text" id="Apellido"></label> </p>  
-<p><label for="Edad"> Edad: <input type="number" id="Edad " min="18" max="80"> </label> </p>
+<p> <label for="Nombre"> Nombre: <input type="text" id="Nombre" name="nombre" required > </label> </p>    
+<p> <label for="Apeliido"> Apellido: <input type="text" id="Apellido" name="apellido"></label> </p>  
+<p><label for="Edad"> Edad: <input type="number" id="Edad " name="edad" min="18" max="80" required> </label> </p>
 
 <p><label for="observacion"> Observacion:
 <textarea name="observacion" id=" observacion" style="height: 180px; width:300px ; font-size: 25px;">
@@ -176,7 +177,7 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <input type="checkbox" name="cursos" value="matematica" id="matematica">
         <label for="matematica"> Matematica</label> <br>
     <input type="checkbox" name="cursos" value="LENGUAJE DSS" id="LDSS"> 
-         <label for="LDSS"> LENGUAJE DSS</label> <br>
+         <label for="LDSS"> Lenguaje DSS</label> <br>
     <input type="checkbox" name="cursos" value="introduccion investigacion" id="intro_INV">
         <label for="INTRO_INV"> Introduccion investigacion</label> <br>
     <input type="checkbox" name="cursos" value="nuevas tendencias" id="Nuevas_Tendencias">
@@ -184,8 +185,47 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </p> 
 
+<p>  <label> Ciclo actual </label> </p>
+<input style="scale: 1.5;" id="primero" type="radio" name="ciclo"  value="primero">
+<label for="primero">Pimero </label><br>
+<input style="scale: 1.5;" id="segundo" type="radio" name="ciclo" value="segundo">
+<label for="segundo">Segundo</label><br>
+<input style="scale: 1.5;" id="tercero" type="radio" name="ciclo" value="tercero">
+<label for="tercero">Tercero</label> <br>
+<input style="scale: 1.5;" id="cuarto" type="radio" name="ciclo" value="cuarto">
+<label for="cuarto">Cuarto</label> <br>
+<input style="scale: 1.5;" id="quinto" type="radio" name="ciclo" value="quinto">
+<label for="quinto">Quinto</label><br>
+<input style="scale: 1.5;" id="sexto" type="radio" name="ciclo" value="sexto">
+<label for="sexto">Sxto</label><br>
+
+<label for="fecha">Seleccione Fecha
+  <input style="font-size: 25px;" type="date" name="fecha" id="fecha" min="2025-09-01" max="2025-12-31">
+</label>
 
 
+<br><br>
+<label for="correo">Correo electronico 
+    <input type="gmail" id="correo" name="coreo" placeholder="@certus.edu.pe" 
+    pattern="[a-zA-Z0-9]+@certus\.edu\.pe" >
+
+
+</label>
+<br><br>
+<label for="clave" > Contraseña <input type="password" id="clave"  name="clave " minlength="8" maxlength="12"
+    placeholder="minimo 8 maximo 12" >
+      
+</label>
+<br>
+
+<p> <label for="usuario"> Usuario: <input type="text" id="usuario" name="usario" minlength="5" maxlength="40" pattern="[a-zA-Z0-9]+" required > </label> </p>      
+
+
+<label for="resetear"> Limpiar: 
+    <input type="reset" id="resetear" name="resetear">
+</label>
+
+<br><br>
 
 <button type="submit" style="font-size: 25px;"> Enviar     </button>
 
