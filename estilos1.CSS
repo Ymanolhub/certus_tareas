@@ -12,9 +12,28 @@ h1  {
     font-family: cursive;
     font-style: italic;
 
+   }
+
+   div{ 
+      color: rgb(255, 80, 103);
+      background-color: rgb(0, 100, 13);
 
    }
 
+  div p{           /* estilo solo para cualquier parrafo dentro de algun div*/
+      font-size: 50px;    
+      color: blueviolet;
+   }
+
+   p label {       /* estilo para cualquier label dentro de un parrafo*/
+    font-size: 25px;
+    
+   }
+label input {      /* estilo para cualquier input dentro de un label*/
+    font-size: 30px;
+
+}
+ 
 
 
 
