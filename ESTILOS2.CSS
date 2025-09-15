@@ -34,7 +34,8 @@ aside {
     padding: 10px;
     max-width: 200px;
     height: 200px;
-    /* width, height sirven para controlar el amcho y altura*/
+    /* width, height sirven para controlar el ancho y altura*/
+    flex-direction: column;  /* coloca aside en columnas*/
 }
 footer {
     background-color: #222;
@@ -54,3 +55,68 @@ article {
 .margen_imagen {
     margin-right: 20px;
 }
+
+.aside_imagenes {
+    background-color: white;
+}
+
+.color_link:hover  {
+    color: green;
+
+}
+.seudo_elemento {
+    color: black;
+    
+
+
+}
+
+
+.primera_letra::first-letter {
+   color: darkblue;
+   font-size: 150%;
+
+}
+
+.seudo_elemento::first-line {
+    color: blue;
+    background-color: crimson;
+
+
+}
+
+.clase_static {
+     font-size: 20px;
+     background-color: aqua;
+     position: static;
+     margin-top: 20px;
+     margin-left: 80px;
+     margin-right: 200px;
+
+
+}
+.clase_static2 {
+    font-size: 20px;    
+    background-color: aqua
+    position: static;
+    top: 20px;
+    left: 80px;     /* espacio desde la izquierda*/
+    right: 200px;    /* espacio desde la derecha*/
+
+}
+
+.clase_relative{
+    font-size: 30px;
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+
+}
+
+.clase_relative:hover {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+

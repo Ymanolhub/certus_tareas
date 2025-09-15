@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="ESTILOS2.CSS"/>
     
 </head>
-<body>
+<body >
 
     <div class="contenedor">
         <header>
@@ -27,9 +27,11 @@
 
         <main>
             
-            <section>
-                <article>
-                    <h2>ZAPATILLAS</h2>
+            <section  style="background-image: url(imagenes_escudos/cristal.png);
+            background-repeat: no-repeat; background-position: 300px;
+            background-attachment: fixed; background-size: 1000px;">
+                <article class="seudo_elemento">
+                    <h2 class="primera_letra">ZAPATILLAS</h2>
                     <p>CATÁLOGO: </p>
                     <p>zapatillas nike</p>
                     <p>La historia de las zapatillas Nike comenzó en 1964 como Blue Ribbon Sports (BRS), 
@@ -39,7 +41,7 @@
                     <img class="margen_imagen" src="nike.jpg" alt="Imagen no carga" width="200px">
                     <img class="margen_imagen" src="nilke1.jpg" alt="IMAGEN NO CARGA" width="200px">
                     <br>
-                    <p>Zapatillas puma</p>
+                    <p class="seudo_elemento">Zapatillas puma</p>
                         <p>La historia de las zapatillas Puma comenzó en Alemania con los hermanos Rudolf y Adolf Dassler, 
                         quienes fundaron la fábrica de calzado "Gebrüder Dassler Schuhfabrik" en 1924. 
                         Tras una amarga separación en 1948, Rudolf fundó su propia empresa, inicialmente llamada Ruda y luego Puma, 
@@ -73,22 +75,84 @@
                        <img src="" alt="">
                 </article>
             </section>
-            
-            <aside>
-                <h3>ENLACES EXTERNOS</h3>
-                <p> <a href="https://www.nike.com.pe/"> NIKE</a></p>
-                <P><a href="https://www.fila.com/"> FILA</a></P>
-                <p><a href="https://www.bata.com/pe/"> BATA</a></p>
-                <p><a href="https://pe.puma.com/.pe">PUMA</a></p>
+
+            <div>
+            <aside> 
+                <h3 class="primera_letra">ENLACES EXTERNOS</h3>
+                <p> <a class="color_link" href="https://www.nike.com.pe/"> NIKE</a></p>
+                <P><a class="color_link" href="https://www.fila.com/"> FILA</a></P>
+                <p><a class="color_link" href="https://www.bata.com/pe/"> BATA</a></p>
+                <p><a class="color_link" href="https://pe.puma.com/.pe">PUMA</a></p>
+                
             </aside>
-            <img src="patines.jpg" alt="IMAGEN NO CARGA" width="100PX" height="100PX" >
+            <br><br> <!-- espacios entre aside -->
+
+
+            <aside class="aside_imagenes ">
+                <img src="patines.jpg" alt="IMAGEN NO CARGA" width="150px">
+                
+            </aside>
             
-            
-            
+            </div>
             
             
 
         </main>
+
+        <section>
+            
+            <article> <h2>POSICIONAMIENTO </h2>
+                 <br>
+                 <h2>POSICIONAMIENTO STATIC</h2>
+        <div style="display: inline-block;">
+            <p class="clase_static">  patines de moda   </p>
+
+        </div>     
+        
+        <div style="display: inline-block;">
+            <p> zapatillas de marca</p>
+
+
+
+        </div>
+          
+
+            
+        <h2> POSICIONAMIENTO STATIC2 (SIN MARGIN_TOP) </h2>
+        <div style="display: inline-block;"> 
+        <p class="clase_static2"> TEXTO CON STATIC </p>    
+        
+        </div>
+        
+        <div  style="display: inline-block;"> 
+            <p style="background-color: orange;" >
+
+                2do texto en la misma linea
+            </p>
+        
+        </div>
+        <h2>texto relative</h2>
+        <div style="display: inline-block">
+         <p class="clase_relative" > texto con posicionamiento relative en un bloque inline </p>
+         <img class="clase_relative"
+              style="border: 9px dotted ; color: brown;"
+         src="pitbull.jpg" alt="IMAGEN NO CARGA"
+         width="200px "  height="341"       >
+
+
+        </div>
+
+        <div style="display: inline-block;" >
+            <p>2do texto en la misma linea</p>
+
+        </div>
+
+     </article>
+
+        </section>
+
+        
+
 
         <footer>
             <p>Derechos reservados &copy; 2025 - SHOES STORE </p>
