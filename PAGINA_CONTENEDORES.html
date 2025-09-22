@@ -22,6 +22,45 @@
             <a href="#">PRODUCTOS</a>
             <a href="#">FORMULARIO DE REGISTRO CLIENTE</a>
             <a href="#">Contacto</a>
+            <ul class="claseNav">
+                <li>
+                    <a class="claseNav" href="https://irun.pe/"> I-RUN</a>
+                    <ul> <!--INICIO SUBMENU-->
+                        <li>
+
+                            <a class="claseNav" href="https://irun.pe/catalogo/mujer/"> MUJER</a>
+                        </li>
+                        <li>
+                            <a class="claseNav" href="https://irun.pe/catalogo/hombre/"> HOMBRE</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a class="claseNav" href=https://www.adidas.pe> ADIDAS</a>
+                    <ul> <!--INICIO SUBMENU-->
+                        <li>
+
+                            <a class="claseNav" href=https://www.adidas.pe/mujer> MUJER</a>
+                        </li>
+                        <li>
+                            <a class="claseNav" href=https://www.adidas.pe/zapatillas-hombre> HOMBRE</a>
+                        </li>
+                        <li>
+                            <a class="claseNav" href="https://www.adidas.pe/ninos">NIÑOS</a>
+                        </li>
+                        <li>
+                            <a class="claseNav" href="https://www.adidas.pe/ropa-futbol"> Ropa de futbol </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+            </ul>
+
+
         
         </nav>
 
@@ -240,13 +279,11 @@
         <div class="item"> Se transforma en lobo</div>
         <div class="item"> Se transforma en leopardo</div>
 
-
-
-
-
       </div>
       
 
+    
+    
 
     </article>
 
@@ -255,7 +292,55 @@
 
 
         </section>
+        <section>
+          <article> <h2> JAVASCRIPT </h2>
+            <div style="font-size: 30px;" >  
+                Contenedor resultado en JAVASCRIPT
 
+                <div id="resultado" style="font-size: 30px;" >
+                    <p> Operacion suma </p>
+
+                </div>
+            </div>
+            <script>
+                window.alert("BIENVENIDOS")
+                var valor1=40 ; var valor2=60
+                var suma = valor1  + valor2 ; var resta = valor1  - valor2;  
+                document.write(" <br> <br> fin de pagina"); 
+
+                console.log("El valor de la suma de", valor1 , " con " , valor2, " es ", suma);
+                console.log("El valor de la resta de", valor1 , " con " , valor2, " es ", resta);
+
+                document.getElementById("resultado") .innerHTML = " <br>El valor de la suma de " + valor1 + 
+                " con "+ valor2+ " es " +suma + "<br>"+
+                " <br>El valor de la resta de " + valor1 +
+                 " con "+ valor2+ " es " +resta+ "<br>";
+
+                
+
+
+
+            </script>
+
+            
+
+          </article>
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <video autoplay muted loop id="Mivideo">
+            <source src="VideoCorto.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+          
         
 
 
