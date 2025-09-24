@@ -6,6 +6,7 @@
     <title> TIENDA VIRTUAL CALZADOS</title>
 
     <link rel="stylesheet" type="text/css" href="ESTILOS2.CSS"/>
+    <script type="text/javascript" src="SCRIPT1.js" >  </script>
     
 </head>
 <body >
@@ -316,13 +317,42 @@
                 " <br>El valor de la resta de " + valor1 +
                  " con "+ valor2+ " es " +resta+ "<br>";
 
+                  document.write("  <ul align='center'  style='color:rgb(47, 59, 34)'> " + 
+                " <li>Capacidad de atencion</li> " +
+                    " <li>Consultar dudas no resueltas</li> " +
+                    " <li>Repasar temas y realizar tareas en casa</li>" +
+                " </ul> ") ;  /* document.write sirve para crear una lista dentro de un scrip, lo recomendable es crear la lista en un html y luego copiar y pegar en document.write*/
+
                 
 
 
 
             </script>
 
-            
+            <h1 style="font-size: 30px;">EJEMPLO DE MANIPULACION DEL DOM   </h1>
+            <p id="ejmDOM1" style="font-size: 25 px;" > Este es el primer texto aplicado a DOM </p>
+            <p class="classDOM1" style="font-size: 30px;" > Texto1 a aplicar DOM mediante clase         </p>
+            <p class="classDOM1" style="font-size: 30px;" > Texto2 a aplicar DOM mediante clase         </p>
+            <h2 class="classDOM1" style="font-size: 30px;" > Texto3 a aplicar DOM mediante TAG        </h2>
+
+
+            <button style="font-size: 25px;" onclick="Fcambiocolor()" > cambiar color por ID </button>
+            <button style="font-size: 25px;" onclick="Fcambioclase1()" > Cambiar por clase  </button>
+            <button style="font-size: 25px;" onclick="Fcambiotag1()" > Cambiar por tag h2  </button>
+            <button style="font-size: 25px;" onclick="FCrear1()" > Crear lista de viñetas  </button>
+            <button style="font-size: 25px;" onclick="FAgregarTextoPermanenete1()" > Agregar texto a vTexto1  </button>
+
+            <h2 > Creacion de elementos en linea</h2>
+            <button onclick="FCrearElemento()" > Crear elemento  </button>
+            <div id="complementario1"  >  Datos complementarios del estudiante: <br>  
+            </div>
+
+
+
+
+
+
+
 
           </article>
 
