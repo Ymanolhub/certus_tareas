@@ -64,13 +64,83 @@ function FCrearElemento() {
          nuevoInputText.type="text";
 
          vElemento.appendChild(nuevoInputText);
+
+         var nuevoh3= document.createElement("h3");
+         var texto=document.createTextNode("ingrese DNI");
+         nuevoh3.appendChild(texto);
+         vElemento.appendChild(nuevoh3);
+
+         var nuevoInputText= document.createElement("input");
+         nuevoInputText.type="number";
+         vElemento.appendChild(nuevoInputText);
+
+         
+    
+
          //CREAR  un parrafo de tamaño 20px que pida ingresar tu DNI 
          // CREAR su input number correspondiente
 
 
 }
 
+function Fqueryselector1() {
+    var vObjetoClase=document.querySelector(".classDOM1");
+    vObjetoClase.innerHTML="Texto cambiado por query selector a la clase primer indice [0]";
 
+    var vObjetoId= document.querySelector("#ejmDOM1");
+    vObjetoId.style.color= "yellow";
+
+    varObjetoTagh2= document.querySelector("h2");
+    vObjetoTagh2.style.textAling="center"; //recuerda que afecta al primer elemento de la pagina 
+
+
+}
+
+function FUsoFor1()
+{
+  
+    const vTextoClass= document.getElementsByClassName("classFOR1");
+    var vTextoTotal="";
+    //como lenght=4 --> ira desde 0 a 3 
+    for(let i=0 ; i< vTextoClass.length; i++)
+    {
+        vTextoClass[i].style.border="2px solid red";
+        vTextoTotal = vTextoTotal + vTextoClass[i].innerText+'-';
+
+    } //fin de for 
+    var nuevoH1 =document.createElement("h1");
+    var texto =document.createTextNode(vTextoTotal);
+    nuevoH1.appendChild(texto);
+    vTextoClass[3].appendChild(nuevoH1);
+
+} //fin de function
+
+function FUsoForEach1() {
+
+    const vTextoclass=document.querySelectorAll(".classFOR1");
+    var vTextoTotal="";
+    //como lenght=4 --> ira desde 0 a 3 
+    vTextoclass.forEach
+    (iter=>
+    {
+        iter.style.border="2px solid red";
+        vTextoTotal = vTextoTotal + iter.innerText+ '-' ;
+    } //fin de for 
+    );
+
+    var nuevoh1=document.createElement("h1");
+    var texto=document.createTextNode(vTextoTotal);
+    nuevoh1.appendChild(texto);
+    vTextoclass[3].appendChild(nuevoh1);
+
+}
+
+function FEliminarConcat()
+{
+    const vTextoClass = document.getElementsByClassName ("classFOR1")
+
+    vTextoClass[3].remove(); // eliminar la class de posicion [3]
+}
 
 
 
