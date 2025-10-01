@@ -1,54 +1,146 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
-<!DOCTYPE html>
-<html lang="es">
-    <link rel="stylesheet" href="Estilo3.CSS" type="text/css">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Página Web ESTRUCTURADA con contenedores</title>
-    
+  <meta charset="UTF-8">
+  <title>Catálogo de Polos</title>
+  <link rel="stylesheet" href="Estilo3.CSS">
 </head>
 <body>
 
-    <div class="contenedor">
-        <header>
-            <h1>Mi Sitio Web</h1>
-            <p>Bienvenido a mi sitio web de ejemplo.</p>
-        </header>
 
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Sobre mí</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-        </nav>
+  <header>
+    <h1>Catálogo de Polos</h1>
+    <img src="polo logo.webp" alt="Logo" width="100">
+  </header>
+  
 
-        <main>
-            
-            <section>
-                <article>
-                    <h2>Artículo 1</h2>
-                    <p>Este es el contenido del primer artículo.</p>
-                </article>
-                <article>
-                    <h2>Artículo 2</h2>
-                    <p>Este es el contenido del segundo artículo.</p>
-                </article>
-            </section>
-            
-            <aside>
-                <h3>Noticias</h3>
-                <p>Contenido adicional como noticias o enlaces útiles.</p>
-            </aside>
-        </main>
+  
+  <table>
+    <tr>
+      <th>Foto</th>
+      <th>Nombre</th>
+      <th>Talla</th>
+      <th>Precio</th>
+    </tr>
+    <tr>
+      <td><img src="polo blanco.webp" width="80"></td>
+      <td>Polo Blanca</td>
+      <td>M</td>
+      <td class="precio">20</td>
+    </tr>
+    <tr>
+      <td><img src="polo azul.webp" width="80"></td>
+      <td>Polo Azul</td>
+      <td>L</td>
+      <td class="precio">25</td>
+    </tr>
+    <tr>
+      <td><img src="polo negro.webp" width="80"></td>
+      <td>Polo Negra</td>
+      <td>S</td>
+      <td class="precio">22</td>
+    </tr>
+    <tr>
+      <td><img src="polo verde.jpg" width="80"></td>
+      <td>Polo verde</td>
+      <td>M</td>
+      <td class="precio">30</td>
+    </tr>
+    <tr>
+      <td><img src="polo rojo.jpg" width="80"></td>
+      <td>Polo Roja</td>
+      <td>L</td>
+      <td class="precio">28</td>
+    </tr>
+  </table>
 
-        <footer>
-            <p>Derechos reservados &copy; 2025 - Mi Sitio Web</p>
-        </footer>
-    </div>
+  <!-- Inputs de texto -->
+  <div>
+    <input type="text" id="txt1" class="input-text" placeholder="Texto 1">
+    <input type="text" id="txt2" class="input-text" placeholder="Texto 2">
+    <input type="text" id="txt3" class="input-text" placeholder="Texto 3">
+  </div>
+
+  <!-- Input number -->
+  <div>
+    <label for="cantidad">Cantidad: </label>
+    <input type="number" id="cantidad" min="1" value="1">
+  </div>
+
+  <!-- Text Area -->
+  <textarea id="resultado" rows="5" placeholder="Aquí se mostrará el resultado..."></textarea>
+
+  <!-- Checkboxes -->
+  <div class="checkbox-group">
+    <input type="checkbox" id="c1" name="extras" class="chk"> Opción 1
+    <input type="checkbox" id="c2" name="extras" class="chk"> Opción 2
+    <input type="checkbox" id="c3" name="extras" class="chk"> Opción 3
+  </div>
+
+  <!-- Radio buttons -->
+  <div class="radio-group">
+    <input type="radio" id="r1" name="opcion" class="radio"> Opción A
+    <input type="radio" id="r2" name="opcion" class="radio"> Opción B
+    <input type="radio" id="r3" name="opcion" class="radio"> Opción C
+  </div>
+
+  <!-- Botones -->
+  <div class="botones">
+    <button onclick="calcularTotal()">Calcular Precio Total</button>
+    <button onclick="mostrarIDs()">Mostrar IDs Inputs</button>
+    <button onclick="contarInputs()">Contar Inputs</button>
+    <button onclick="descuentoRecargo()">Descuento/Recargo</button>
+  </div>
+
+  <!-- Resultados -->
+  <h2 id="total"></h2>
+  <h2 id="ids"></h2>
+  <h2 id="conteo"></h2>
+
+  <script>
+    function calcularTotal() {
+      let precios = document.querySelectorAll(".precio");
+      let cantidad = parseInt(document.getElementById("cantidad").value);
+      let precio = parseFloat(precios[1].textContent); 
+      let total = precio * cantidad;
+      document.getElementById("total").innerText = "Precio Total: $" + total;
+    }
+
+    function mostrarIDs() {
+      let inputs = document.querySelectorAll(".input-text");
+      let ids = "";
+      inputs.forEach(i => ids += i.id + " ");
+      document.getElementById("ids").innerText = "IDs: " + ids.trim();
+    }
+
+    function contarInputs() {
+      let inputs = document.querySelectorAll(".input-text");
+      document.getElementById("conteo").innerText = "Número de inputs: " + inputs.length;
+    }
+
+    function descuentoRecargo() {
+      let inputs = document.querySelectorAll(".input-text");
+      let cantidad = parseInt(document.getElementById("cantidad").value);
+      let precios = document.querySelectorAll(".precio");
+      let precio = parseFloat(precios[0].textContent); 
+      let total = precio * cantidad;
+
+      let caracteres = 0;
+      inputs.forEach(i => caracteres += i.value.length);
+
+      if (caracteres > cantidad) {
+        let descuento = total * 0.1;
+        let final = total - descuento;
+        document.getElementById("resultado").value = 
+          "Descuento: $" + descuento + "\nTotal a pagar: $" + final;
+      } else {
+        let recargo = total * 0.05;
+        let final = total + recargo;
+        document.getElementById("resultado").value = 
+          "Recargo: $" + recargo + "\nTotal a pagar: $" + final;
+      }
+    }
+  </script>
 
 </body>
 </html>
