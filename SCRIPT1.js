@@ -47,7 +47,7 @@ function FCrear1() {
 
 function FAgregarTextoPermanenete1() {
 
-    let vtexto4="<br> <p style= 'font-size: 15px;'> Texto agregado con concatenacion </p>  ";
+    let vTexto4="<br> <p style= 'font-size: 15px;'> Texto agregado con concatenacion </p>  ";
     vTexto1.innerHTML= vTexto1.innerHTML + vtexto4;
 }
 
@@ -218,12 +218,14 @@ document.addEventListener('DOMContetLoaded', ()=> {
         radio.addEventListener('change', function(event) {
             
             const cantidad = event.target.value;
-            document.getElementById('observacion').value = cantidad;
+            document.getElementById('observacion').value = cantidad; 
         }
     );
     }
 )
 } );
+
+document 
     
 
 
