@@ -138,11 +138,93 @@ function FUsoForEach1() {
 function FEliminarConcat()
 {
     const vTextoClass = document.getElementsByClassName ("classFOR1")
+    let rpta =prompt  ("Estas seguro de eliminar el texto concatenado? (S/N)",'');
+    if (rpta=="S" || rpta=="s") //doble || significa o
+    { let rpta2 =prompt( "Ingrese el numero de fila a eliminar",'' );
+        if(rpta2>=0 && rpta2< vTextoClass.length) // doble && significa y
+        {
+            vTextoClass[rpta2].remove(); //eliminar la class de posicion [rpta2]
+        alert("CONCATENACION ELIMINADA"); 
+        }
 
-    vTextoClass[3].remove(); // eliminar la class de posicion [3]
+    else 
+    {
+        alert("Incorrecto, no existe esa fila");
+    }
+
+    }
+    else
+     {  if(rpta=="N" || rpta=="n" )
+        { alert("No se eliminará"); 
+
+        }
+    else
+    {alert("OPCION INCORRECTA-Ingrese nuevamente");
+
+    }
+
+    }
+  //removeChild funciona cuando un nodo(class, id, etx) esta dentro de otro
+    
 }
 
+ function FCapturarNombre(){
+    
 
+    const vTexto1 = document.getElementById("Nombre");
+    const vTexto2 = document.querySelectorAll("input.datosPersonales");
+    const vTexto3 = document.getElementById("clave");
+    const vtexto4 = document.getElementById("Apellido");
+    const vTexto5 = document.getElementById("usuario");
+    // usar input para clases relacionadas a cajas de texto, etc
+    vTexto1.style.color="red";
+
+    var valor1 =vTexto1.value; // value detiene el contenido de la caja de texto nombre 
+    var valor2 =""; // tipo string
+    vTexto3.value=valor1; //asigna el nombre a la clave
+    
+    var valor3 =vtexto4.value;
+    vTexto5.value= valor3;
+
+    
+    // foreach recorre todo el contenido del array de la clase de datosPersonales
+    vTexto2.forEach(input => {
+        valor2 = valor2 + `${input.name}: ${input.value} : ${input.id} \n`; //alt+96
+        input.style.border="2px solid orange";
+        //para comillas tipotexto permiten colocar variables del form y convertirlas a texto mediante $ 
+        });
+
+    vTexto2[1].style.backgroundColor="green";
+    document.getElementById('observacion').value = valor2;
+    
+}
+function fValidarCiclo()
+{
+    //var varciclo=document.get
+    const varciclo=document.getElementsByName("ciclo");
+
+    for( let i=0; i < varciclo.length; i ++) {
+        if (varciclo [i].checked==true ) {
+            document.getElementById('observacion').value= varciclo[i].value;
+            return
+        }
+    }
+}
+
+document.addEventListener('DOMContetLoaded', ()=> { 
+    const radios  = document.querySelectorAll('input[name="ciclo"]');
+
+    radios.forEach(function(radio){
+        radio.addEventListener('change', function(event) {
+            
+            const cantidad = event.target.value;
+            document.getElementById('observacion').value = cantidad;
+        }
+    );
+    }
+)
+} );
+    
 
 
 
